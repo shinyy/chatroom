@@ -1,0 +1,21 @@
+body{
+	padding:50px;
+	font:14px microsoft yahei,simhei;
+}
+#content{
+	width: 800px;
+	margin:0 auto;
+}
+#room{
+	background: #ddd;
+	margin-bottom: 1em;
+
+}
+#message{
+	width:690px;
+	height:300px;
+	overflow: auto;
+	background: #eee;
+	margin-bottom: 1em;
+	margin-right: 10px;
+}
