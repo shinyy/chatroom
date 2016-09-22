@@ -22,7 +22,7 @@ Chat.prototype.processCommand=function(command){
 	var message=false;
 
 	switch(command){
-		case 'join:'
+		case 'join':
 		words.shift();
 		var room=words.join('');
 		this.changeRoom(room);
@@ -33,7 +33,7 @@ Chat.prototype.processCommand=function(command){
 		this.socket.emit('nameAttempt',name);
 		break;
 
-		default;
+		default:
 		message='unrecognized command.' ;
 		break;
 	}
