@@ -9,6 +9,7 @@ body{
 #room{
 	background: #ddd;
 	margin-bottom: 1em;
+	min-height: 20px;
 
 }
 #message{

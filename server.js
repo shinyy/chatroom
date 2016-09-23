@@ -10,15 +10,15 @@ function send404(response){
 	response.end();
 }
 
-function sendFile(response,filePath,fileContents){
-	response.writeHead(
-		200,
-		{'content-type':mime.lookup(path.basename(filePath))}
-		);
-	response.end(fileContents);
+function sendFile(response, filePath, fileContents) {
+  response.writeHead(
+    200, 
+    {"content-type": mime.lookup(path.basename(filePath))}
+  );
+  response.end(fileContents);
 }
 
-function serverStatic(response,cache,absPath){
+function serveStatic(response,cache,absPath){
 	if(cache[absPath]){
 		sendFile(response,absPath,cache[absPath]);
 	}else{
@@ -48,8 +48,8 @@ var server=http.createServer(function(request,response){
 	}else{
 		filePath='public'+request.url;
 	}
-	var absPath="./"+filePath;
-	serverStatic(response,cache,absPath);
+	var absPath='./'+filePath;
+	serveStatic(response,cache,absPath);
 })
 
 server.listen(10086,function(){
